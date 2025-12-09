@@ -1,0 +1,13 @@
+{
+  "name": "activity-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo testing activity server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Activity Node.js server"
+}
