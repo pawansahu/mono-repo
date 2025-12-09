@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "start": "concurrently \"npm run start --workspace=server-api\" \"npm run start --workspace=web-client\" \"npm run start --workspace=activity-server\" \"npm run start --workspace=activity-webapp\"",
-    "start:activity": "concurrently \"npm run start --workspace=activity-server\" \"npm run start --workspace=activity-webapp\"",
+    "start": "concurrently \"cd packages/server-api && npm start\" \"cd packages/activity-webapp && npm start\"",
+    "start:server": "cd packages/server-api && npm start",
+    "start:webapp": "cd packages/activity-webapp && npm start",
     "test": "lerna run test",
     "new-version": "lerna version --conventional-commits --yes",
     "diff": "learna diff"
